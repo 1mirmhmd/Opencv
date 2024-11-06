@@ -3,10 +3,13 @@ import numpy as np
 import gradio as gr
 
 # Görseli siyah-beyaza dönüştüren fonksiyon
+
+
 def nostalji(image):
     image = np.array(image)
     gray_image = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
     return gray_image
+
 
 # Gradio arayüzü oluştur
 with gr.Blocks() as demo:
